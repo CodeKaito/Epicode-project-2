@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+button.genres-button {
+    border: 2px rgb(85, 85, 85) solid;
+    background-color: black;
+    border-radius: 0;
+}
+
+button.genres-button::after {
+    margin-left: 20px;
+}
+
+div.icon-border {
+    border: 2px rgb(85, 85, 85) solid;
+    height: 35px;
+    width: 65px;
+}
+
+div.ImgFilm {
+    transition: 0.5s;
+}
+
+div.ImgFilm:hover {
+    transform: scale(1.1);
+    overflow: visible;
+}
+
+.carousel-control-next {
+    margin-right: 50px;
+    width: 50px;
+}
+
+.carousel-control-next-icon {
+    padding: 10px;
+}
+
+.carousel-control-prev {
+    width: 50px;
+}
+
+.carousel-control-prev-icon {
+    padding: 10px;
+}
+
+i.icon {
+    font-size: 30px;
+    margin-right: 20px;
+}

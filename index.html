@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Netflix Clone</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link rel="shortcut icon" href="https://assets.nflxext.com/ffe/siteui/common/icons/nficon2016.ico">
+
+    <!-- Bootstrap CSS v5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+
+    <!-- Style.css -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-dark">
+    <header>
+        <!-- place navbar here -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/Netflix_Logo_RGB.png?raw=true"
+                        width="150px" alt="netflix-logo" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" href="#">Tv Shows</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">Recently Added</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#">My List</a>
+                        </li>
+                    </ul>
+
+                    <i class="bi bi-search text-light font-lg"></i>
+                    <a class="text-light mx-3" href="#">KIDS</a>
+                    <i class="bi bi-bell-fill text-light font-lg mx-2"></i>
+
+                    <div class="btn-group">
+                        <div class="user-logo-container m-2">
+                            <a class="nav-link dropdown-toggle text-light" href="#" role="button"
+                                data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                                <img src="https://wallpapers.com/images/hd/netflix-profile-pictures-1000-x-1000-88wkdmjrorckekha.jpg"
+                                    width="35px" alt="user-logo" />
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <div class="d-flex align-items-center px-2">
+                                    <img src="https://wallpapers.com/images/hd/netflix-profile-pictures-1000-x-1000-88wkdmjrorckekha.jpg"
+                                        height="40px" alt="logo-dropdown" class="mx-1" />
+                                    <div class="mx-2">
+                                        <span>User</span>
+                                        <br />
+                                        <span class="user-email">User mail</span>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="mx-2">
+                                    <div class="d-flex">
+                                        <i class="bi bi-person mx-2"></i>
+                                        <p>Profile</p>
+                                    </div>
+                                    <div class="d-flex">
+                                        <i class="bi bi-star mx-2"></i>
+                                        <p>Subscription</p>
+                                    </div>
+                                    <div class="d-flex">
+                                        <i class="bi bi-gear mx-2"></i>
+                                        <p>Settings</p>
+                                    </div>
+                                </div>
+                                <hr />
+                                <div class="d-flex mx-2">
+                                    <i class="bi bi-power mx-2"></i>
+                                    <p>Sign Out</p>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container-fluid mx-5">
+        <!-- Title section -->
+        <section class="d-flex mt-5 justify-content-between">
+            <div class="d-flex">
+                <div>
+                    <h1 class="text-light">TV Shows</h1>
+                </div>
+
+                <div class="dropdown genres-container d-flex align-items-center mx-5">
+                    <button class="btn btn-dark dropdown-toggle genres-button" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Genres
+                    </button>
+                    <ul class="dropdown-menu bg-dark">
+                        <li><a class="dropdown-item text-light" href="#">Action</a></li>
+                        <li><a class="dropdown-item text-light" href="#">Drama</a></li>
+                        <li><a class="dropdown-item text-light" href="#">Horror</a></li>
+                        <li><a class="dropdown-item text-light" href="#">Thriller</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="d-flex mx-5">
+                <div class="icon-border d-flex align-items-center justify-content-center">
+                    <i class="bi bi-list text-light font-lg cursor-pointer"></i>
+                </div>
+
+                <div class="icon-border d-flex align-items-center justify-content-center">
+                    <i class="bi bi-grid-fill text-light font-lg cursor-pointer"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trending section -->
+        <section class="mt-5">
+            <h3 class="text-light">Trending now</h3>
+
+            <div class="container-fluid" role="button">
+                <div class="row">
+                    <div class="col">
+                        <div id="trending" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner overflow-visible">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-6 col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/1.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="col-6 col-sm-3 col-lg-2 p-1 ImgFilm overflow-visible">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/2.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-sm-block col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/3.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-sm-block col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/4.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-lg-block col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/5.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-lg-block col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/6.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-6 col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/7.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="col-6 col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/8.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-sm-block col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/9.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-sm-block col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/10.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-lg-block col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/11.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-lg-block col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/12.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-6 col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/12.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="col-6 col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/13.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-sm-block col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/14.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-sm-block col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/15.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-lg-block col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/16.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-lg-block col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/17.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#trending" role="button"
+                                data-bs-target="#trending" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#trending" role="button"
+                                data-bs-target="#trending" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trending section -->
+        <section class="mt-5">
+            <h3 class="text-light">Trending now</h3>
+
+            <div class="container-fluid" role="button">
+                <div class="row">
+                    <div class="col">
+                        <div id="trending" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner overflow-visible">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-6 col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/1.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="col-6 col-sm-3 col-lg-2 p-1 ImgFilm overflow-visible">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/2.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-sm-block col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/3.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-sm-block col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/4.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-lg-block col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/5.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-lg-block col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/6.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-6 col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/7.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="col-6 col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/8.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-sm-block col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/9.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-sm-block col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/10.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-lg-block col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/11.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-lg-block col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/12.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-6 col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/12.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="col-6 col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/13.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-sm-block col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/14.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-sm-block col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/15.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-lg-block col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/16.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-lg-block col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/17.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#trending" role="button"
+                                data-bs-target="#trending" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#trending" role="button"
+                                data-bs-target="#trending" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trending section -->
+        <section class="mt-5">
+            <h3 class="text-light">Trending now</h3>
+
+            <div class="container-fluid" role="button">
+                <div class="row">
+                    <div class="col">
+                        <div id="trending" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner overflow-visible">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-6 col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/1.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="col-6 col-sm-3 col-lg-2 p-1 ImgFilm overflow-visible">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/2.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-sm-block col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/3.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-sm-block col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/4.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-lg-block col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/5.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-lg-block col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/6.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-6 col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/7.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="col-6 col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/8.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-sm-block col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/9.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-sm-block col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/10.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-lg-block col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/11.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-lg-block col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/12.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-6 col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/12.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="col-6 col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/13.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-sm-block col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/14.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-sm-block col-sm-3 col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/15.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-lg-block col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/16.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                        <div class="d-none d-lg-block col-lg-2 p-1 ImgFilm">
+                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/17.png?raw=true" alt="Describe Image" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#trending" role="button"
+                                data-bs-target="#trending" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#trending" role="button"
+                                data-bs-target="#trending" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="container-fluid">
+        <div class="row">
+            <footer class="footer mt-5">
+                <div class="mt-5 d-flex">
+                    <div class="col-2 col-sm-3"></div>
+
+                    <div class="mb-4 text-center">
+                        <i class="bi bi-facebook text-secondary icon cursor-pointer"></i>
+                    </div>
+                    <div>
+                        <i class="bi bi-instagram text-secondary icon cursor-pointer"></i>
+                    </div>
+                    <div>
+                        <i class="bi bi-twitter text-secondary icon cursor-pointer"></i>
+                    </div>
+                    <div>
+                        <i class="bi bi-youtube text-secondary icon cursor-pointer"></i>
+                    </div>
+
+                    <div class="col-3"></div>
+                </div>
+
+                <div class="mb-4 d-flex">
+                    <div class="col-2 col-sm-3"></div>
+
+                    <div class="col-2">
+                        <span class="fs-6 text-secondary FooterDescription">Audio and Subtitles</span>
+                    </div>
+                    <div class="col-2">
+                        <span class="fs-6 text-secondary FooterDescription">Audio Description</span>
+                    </div>
+                    <div class="col-2">
+                        <span class="fs-6 text-secondary FooterDescription">Help Center</span>
+                    </div>
+                    <div class="col-3">
+                        <span class="fs-6 text-secondary FooterDescription">Gift Cards</span>
+                    </div>
+                </div>
+
+                <div class="mb-4 d-flex">
+                    <div class="col-2 col-sm-3"></div>
+
+                    <div class="col-2">
+                        <span class="fs-6 text-secondary FooterDescription">Media Center</span>
+                    </div>
+                    <div class="col-2">
+                        <span class="fs-6 text-secondary FooterDescription">Investor Relations</span>
+                    </div>
+                    <div class="col-2">
+                        <span class="fs-6 text-secondary FooterDescription">Jobs</span>
+                    </div>
+                    <div class="col-3">
+                        <span class="fs-6 text-secondary FooterDescription">Terms of Use</span>
+                    </div>
+                </div>
+                <div class="mb-4 d-flex">
+                    <div class="col-2 col-sm-3"></div>
+
+                    <div class="col-2">
+                        <span class="fs-6 text-secondary FooterDescription">Privacy</span>
+                    </div>
+                    <div class="col-2">
+                        <span class="fs-6 text-secondary FooterDescription">Legal Notices</span>
+                    </div>
+                    <div class="col-2">
+                        <span class="fs-6 text-secondary FooterDescription">Cookie Preferences</span>
+                    </div>
+                    <div class="col-2">
+                        <span class="fs-6 text-secondary FooterDescription">Corporate Information</span>
+                    </div>
+                </div>
+                <div class="mb-4 d-flex">
+                    <div class="col-2 col-sm-3"></div>
+
+                    <div class="col-9">
+                        <span class="fs-6 text-secondary FooterDescription">Contact Us</span>
+                    </div>
+                </div>
+
+                <div class="mb-3 d-flex">
+                    <div class="col-2 col-sm-3"></div>
+
+                    <div class="col-9">
+                        <span class="fs-6 text-secondary ServiceCode">Service Code</span>
+                    </div>
+                </div>
+
+                <div class="mb-3 d-flex">
+                    <div class="col-2 col-sm-3"></div>
+
+                    <div class="col-9">
+                        <span class="text-secondary FinalC">© 1997-2023 Netflix, inc</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script>
+        // Seleziona la sezione con la classe "mt-5"
+        const section = document.querySelector(".mt-5");
+
+        // Nascondi il contenuto che supera i 60px di overflow laterale
+        section.style.overflowX = "hidden";
+
+        // Rimuovi la proprietà scrollbarWidth impostata precedentemente
+        section.style.scrollbarWidth = "";
+    </script>
+</body>
+
+</html>
