@@ -57,11 +57,15 @@ div.netflix-img:hover {
     transform: scale(1.1);  
 }
 
+.carousel-control-next {
+    width: 80px;
+}
+
 .carousel-control-next-icon {
     padding: 10px;
 }
 
-.carousel-control-prev, .carousel-control-next {
+.carousel-control-prev {
     width: 50px;
 }
 
