@@ -32,6 +32,9 @@ div.icon-border {
     width: 65px;
 }
 
+div.card {
+    background-color: unset;
+}
 
 div.netflix-img {
     transition: 0.5s;
