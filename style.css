@@ -41,7 +41,12 @@ div.netflix-img {
 }
 
 div.netflix-img:hover {
-    transform: scale(1.1);  
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+div.carousel-inner {
+    overflow: visible;
 }
 
 .carousel-control-next {
