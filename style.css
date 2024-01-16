@@ -6,6 +6,7 @@
 
 body {
     max-width: 1870px;
+    overflow: hidden;
 }
 
 a {
@@ -32,29 +33,8 @@ div.icon-border {
     width: 65px;
 }
 
-div.slider-wrap {
-    position: relative;
-}
-
-div.slider-main {
-    position: absolute;
-}
-
-div.item {
-    width: 400px;
-    display: inline-block;
-    height: 100px;
-    background-color: aquamarine;
-}
-
-div.text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    font-size: 20px;
-    color: white;
-    font: bold;
+section#carousel-section {
+    overflow: hidden;
 }
 
 div.ImgFilm {
@@ -63,12 +43,6 @@ div.ImgFilm {
 
 div.ImgFilm:hover {
     transform: scale(1.1);   
-}
-
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
-    display: flex;
 }
 
 .carousel-control-next {
@@ -95,11 +69,4 @@ i.icon {
 
 a.servicecode-container {
     border: 2px rgb(85, 85, 85) solid;
-}
-
-@media(max-width: 768px) {
-    .carousel-inner .carousel-item-end.active,
-    .carousel-inner .carousel-item-next {
-        transform: translateX(25%);
-    }
 }
