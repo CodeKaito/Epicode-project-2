@@ -12,6 +12,10 @@ a {
     cursor: pointer;
 }
 
+button.navbar-toggler {
+    background-color: white;
+}
+
 button.genres-button {
     border: 2px rgb(85, 85, 85) solid;
     background-color: black;
@@ -45,19 +49,19 @@ div.text {
     font: bold;
 }
 
-div.ImgFilm {
+div.netflix-img {
     transition: 0.5s;
 }
 
-div.ImgFilm:hover {
-    transform: scale(1.1);   
+div.netflix-img:hover {
+    transform: scale(1.1);  
 }
 
 .carousel-control-next-icon {
     padding: 10px;
 }
 
-.carousel-control-prev {
+.carousel-control-prev, .carousel-control-next {
     width: 50px;
 }
 
@@ -74,7 +78,7 @@ a.servicecode-container {
     border: 2px rgb(85, 85, 85) solid;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 575px) {
     .carousel-inner .carousel-item > div {
         display: none;
     }
@@ -89,17 +93,52 @@ a.servicecode-container {
     display: flex;
 }
 
-/* medium and up screens */
-@media (min-width: 768px) {
-    
+@media (min-width: 576px) and (max-width: 767px) {
     .carousel-inner .carousel-item-end.active,
     .carousel-inner .carousel-item-next {
-      transform: translateX(25%);
+      transform: translateX(50%);
     }
     
     .carousel-inner .carousel-item-start.active, 
     .carousel-inner .carousel-item-prev {
-      transform: translateX(-25%);
+      transform: translateX(-50%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+  transform: translateX(0);
+}
+
+/* medium and up screens */
+@media (min-width: 768px) and (max-width: 992px) {
+    
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(33.33%);
+    }
+    
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-33.33%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+  transform: translateX(0);
+}
+
+@media (min-width: 992px){
+    
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(16.66%);
+    }
+    
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-16.66%);
     }
 }
 

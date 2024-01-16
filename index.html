@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="bg-dark">
+<body class="bg-dark text-light">
     <header>
         <!-- place navbar here -->
         <nav class="navbar navbar-expand-lg">
@@ -101,7 +101,7 @@
             </div>
         </nav>
     </header>
-    <main class="container-fluid mx-5">
+    <main class="container-fluid mx-0 mx-md-5">
         <!-- Title section -->
         <section class="d-flex mt-5 justify-content-between">
             <div class="d-flex">
@@ -124,65 +124,99 @@
 
             </div>
 
-            <div class="d-flex mx-5">
-                <div class="icon-border d-flex align-items-center justify-content-center">
+            <div class="d-none d-md-flex mx-5">
+                <div class=" icon-border d-md-flex align-items-center justify-content-center">
                     <i class="bi bi-list text-light font-lg cursor-pointer"></i>
                 </div>
 
-                <div class="icon-border d-flex align-items-center justify-content-center">
+                <div class="icon-border d-md-flex align-items-center justify-content-center">
                     <i class="bi bi-grid-fill text-light font-lg cursor-pointer"></i>
                 </div>
             </div>
         </section>
 
         <!-- Trending section -->
-        <div class="text-center my-3">
-            <div class="row">
-                <div id="carousel" class="carousel slide" data-ride="carousel">
+        <section class="container-fluid text-center my-5 position-relative container-slide">
+            <div class="col-12 mx-auto my-4">
+                <h3 class="text-start">Trending Now</h3>
+            </div>
+
+            <div class="col-md-12 col mx-md-auto m-0 my-auto">
+                <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <div class="col-md-2">
-                                <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/1.png?raw=true" class="img-fluid" alt="">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-2 netflix-img">
+                                <div class="card">
+                                    <div class="card-img ">
+                                        <img src="//via.placeholder.com/500x400/31f?text=1" class="card-img-top object-fit-cover" alt="">
+                                    </div>
+                                    <div class="card-img-overlay">Slide 1</div>
+                                </div>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <div class="col-md-2">
-                                <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/2.png?raw=true" class="img-fluid" alt="">>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-2 netflix-img">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="//via.placeholder.com/500x400/e66?text=2" class="card-img-top object-fit-cover" alt="">
+                                    </div>
+                                    <div class="card-img-overlay">Slide 2</div>
+                                </div>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <div class="col-md-2">
-                                <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/3.png?raw=true" class="img-fluid" alt="">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-2 netflix-img">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="//via.placeholder.com/500x400/7d2?text=3" class="card-img-top object-fit-cover" alt="">
+                                    </div>
+                                    <div class="card-img-overlay">Slide 3</div>
+                                </div>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <div class="col-md-2">
-                                <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/4.png?raw=true" class="img-fluid" alt="">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-2 netflix-img">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="//via.placeholder.com/500x400?text=4" class="card-img-top object-fit-cover" alt="">
+                                    </div>
+                                    <div class="card-img-overlay">Slide 4</div>
+                                </div>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <div class="col-md-2">
-                                <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/6.png?raw=true" class="img-fluid" alt="">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-2 netflix-img">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="//via.placeholder.com/500x400/aba?text=5" class="card-img-top object-fit-cover" alt="">
+                                    </div>
+                                    <div class="card-img-overlay">Slide 5</div>
+                                </div>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <div class="col-md-2">
-                                <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/7.png?raw=true" class="img-fluid" alt="">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-2 netflix-img">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="//via.placeholder.com/500x400/fc0?text=6" class="card-img-top object-fit-cover" alt="">
+                                    </div>
+                                    <div class="card-img-overlay">Slide 6</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+
+                    <button class="carousel-control-prev bg-transparent w-aut" type="button" data-bs-target="#recipeCarousel" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                       </button>
-                      <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                      <button class="carousel-control-next bg-transparent w-aut" type="button" data-bs-target="#recipeCarousel" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                       </button>
                 </div>
             </div>
-            <h5 class="mt-2 fw-light">advances one slide at a time</h5>
-        </div>
+        </section>
 
     </main>
 
