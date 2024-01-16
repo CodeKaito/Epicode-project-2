@@ -12,6 +12,10 @@ a {
     cursor: pointer;
 }
 
+.dropdown-item:hover {
+    background-color: rgb(91, 91, 91);
+}
+
 button.navbar-toggler {
     background-color: white;
 }
