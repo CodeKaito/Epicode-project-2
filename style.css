@@ -78,6 +78,19 @@ a.servicecode-container {
     border: 2px rgb(85, 85, 85) solid;
 }
 
+.test {
+    height: 100vh;
+}
+
+.hidden {
+    opacity: 0;
+    transition: opacity 10s;
+}
+
+.show {
+    opacity: 1;
+}
+
 @media (max-width: 575px) {
     .carousel-inner .carousel-item > div {
         display: none;
