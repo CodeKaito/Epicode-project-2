@@ -13,6 +13,10 @@ a {
     text-decoration: none;
 }
 
+button.navbar-toggler {
+    background-color: white;
+}
+
 .cursor-pointer {
     cursor: pointer;
 }
