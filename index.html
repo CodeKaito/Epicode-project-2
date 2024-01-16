@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="bg-dark">
+<body class="bg-dark text-light">
     <header>
         <!-- place navbar here -->
         <nav class="navbar navbar-expand-lg">
@@ -101,10 +101,10 @@
             </div>
         </nav>
     </header>
-    <main class="container-fluid mx-5">
+    <main class="container-fluid ">
         <!-- Title section -->
         <section class="d-flex mt-5 justify-content-between">
-            <div class="d-flex">
+            <div class="d-flex mx-0 mx-md-2">
                 <div>
                     <h1 class="text-light">TV Shows</h1>
                 </div>
@@ -124,122 +124,96 @@
 
             </div>
 
-            <div class="d-flex mx-5">
-                <div class="icon-border d-flex align-items-center justify-content-center">
+            <div class="d-none d-md-flex mx-5">
+                <div class=" icon-border d-md-flex align-items-center justify-content-center">
                     <i class="bi bi-list text-light font-lg cursor-pointer"></i>
                 </div>
 
-                <div class="icon-border d-flex align-items-center justify-content-center">
+                <div class="icon-border d-md-flex align-items-center justify-content-center">
                     <i class="bi bi-grid-fill text-light font-lg cursor-pointer"></i>
                 </div>
             </div>
         </section>
 
         <!-- Trending section -->
-        <section class="mt-5" id="carousel-section">
-            <h3 class="text-light">Trending now</h3>
+        <section class="text-center my-5 position-relative container-slide" id="trending">
+            <div class="col-12 mx-0 mx-md-2 my-4">
+                <h3 class="text-start">Trending Now</h3>
+            </div>
 
-            <div class="container-fluid">
-                <div class="row">
-                        <div id="trending" class="carousel slide" data-ride="carousel">
-                            <div class="carousel-inner overflow-visible">
-                                <div class="carousel-item active">
-                                    <div class="row">
-                                        <div class="col-6 col-sm-3 col-lg-2 p-1 ImgFilm">
-                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/1.png?raw=true"
-                                                alt="Describe Image" />
-                                        </div>
-                                        <div class="col-6 col-sm-3 col-lg-2 p-1 ImgFilm overflow-visible">
-                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/2.png?raw=true"
-                                                alt="Describe Image" />
-                                        </div>
-                                        <div class="d-none d-sm-block col-sm-3 col-lg-2 p-1 ImgFilm">
-                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/3.png?raw=true"
-                                                alt="Describe Image" />
-                                        </div>
-                                        <div class="d-none d-sm-block col-sm-3 col-lg-2 p-1 ImgFilm">
-                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/4.png?raw=true"
-                                                alt="Describe Image" />
-                                        </div>
-                                        <div class="d-none d-lg-block col-lg-2 p-1 ImgFilm">
-                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/5.png?raw=true"
-                                                alt="Describe Image" />
-                                        </div>
-                                        <div class="d-none d-lg-block col-lg-2 p-1 ImgFilm">
-                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/6.png?raw=true"
-                                                alt="Describe Image" />
-                                        </div>
+            <div class="col-md-12 col m-0 my-auto">
+                <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+                    <div class="carousel-inner p-3">
+                        <div class="carousel-item active">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-2 netflix-img">
+                                <div class="card">
+                                    <div class="card-img ">
+                                        <img src="//via.placeholder.com/500x400/31f?text=1" class="card-img-top object-fit-cover" alt="">
                                     </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        <div class="col-6 col-sm-3 col-lg-2 p-1 ImgFilm">
-                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/7.png?raw=true"
-                                                alt="Describe Image" />
-                                        </div>
-                                        <div class="col-6 col-sm-3 col-lg-2 p-1 ImgFilm">
-                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/8.png?raw=true"
-                                                alt="Describe Image" />
-                                        </div>
-                                        <div class="d-sm-block col-sm-3 col-lg-2 p-1 ImgFilm">
-                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/9.png?raw=true"
-                                                alt="Describe Image" />
-                                        </div>
-                                        <div class="d-sm-block col-sm-3 col-lg-2 p-1 ImgFilm">
-                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/10.png?raw=true"
-                                                alt="Describe Image" />
-                                        </div>
-                                        <div class="d-lg-block col-lg-2 p-1 ImgFilm">
-                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/11.png?raw=true"
-                                                alt="Describe Image" />
-                                        </div>
-                                        <div class="d-lg-block col-lg-2 p-1 ImgFilm">
-                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/12.png?raw=true"
-                                                alt="Describe Image" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        <div class="col-6 col-sm-3 col-lg-2 p-1 ImgFilm">
-                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/12.png?raw=true"
-                                                alt="Describe Image" />
-                                        </div>
-                                        <div class="col-6 col-sm-3 col-lg-2 p-1 ImgFilm">
-                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/13.png?raw=true"
-                                                alt="Describe Image" />
-                                        </div>
-                                        <div class="d-sm-block col-sm-3 col-lg-2 p-1 ImgFilm">
-                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/14.png?raw=true"
-                                                alt="Describe Image" />
-                                        </div>
-                                        <div class="d-sm-block col-sm-3 col-lg-2 p-1 ImgFilm">
-                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/15.png?raw=true"
-                                                alt="Describe Image" />
-                                        </div>
-                                        <div class="d-lg-block col-lg-2 p-1 ImgFilm">
-                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/16.png?raw=true"
-                                                alt="Describe Image" />
-                                        </div>
-                                        <div class="d-lg-block col-lg-2 p-1 ImgFilm">
-                                            <img src="https://github.com/CodeKaito/Epicode-project-2/blob/main/assets/imgs/movies/17.png?raw=true"
-                                                alt="Describe Image" />
-                                        </div>
-                                    </div>
+                                    <div class="card-img-overlay">Slide 1</div>
                                 </div>
                             </div>
-                            <button  class="carousel-control-prev" href="#trending" role="button" data-bs-target="#trending"
-                                data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" href="#trending" role="button" data-bs-target="#trending"
-                                data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
                         </div>
+                        <div class="carousel-item">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-2 netflix-img">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="//via.placeholder.com/500x400/e66?text=2" class="card-img-top object-fit-cover" alt="">
+                                    </div>
+                                    <div class="card-img-overlay">Slide 2</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-2 netflix-img">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="//via.placeholder.com/500x400/7d2?text=3" class="card-img-top object-fit-cover" alt="">
+                                    </div>
+                                    <div class="card-img-overlay">Slide 3</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-2 netflix-img">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="//via.placeholder.com/500x400?text=4" class="card-img-top object-fit-cover" alt="">
+                                    </div>
+                                    <div class="card-img-overlay">Slide 4</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-2 netflix-img">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="//via.placeholder.com/500x400/aba?text=5" class="card-img-top object-fit-cover" alt="">
+                                    </div>
+                                    <div class="card-img-overlay">Slide 5</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-2 netflix-img">
+                                <div class="card">
+                                    <div class="card-img">
+                                        <img src="//via.placeholder.com/500x400/fc0?text=6" class="card-img-top object-fit-cover" alt="">
+                                    </div>
+                                    <div class="card-img-overlay">Slide 6</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    <button class="carousel-control-prev bg-transparent w-aut" type="button" data-bs-target="#recipeCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next w-aut next-shadow" type="button" data-bs-target="#recipeCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
                 </div>
             </div>
         </section>
@@ -289,7 +263,6 @@
                         </div>
 
                     </div>
-                    <!-- Grid column -->
                     <!-- Grid column -->
                     <div class="col-md-3 mb-4">
                         <!-- Links -->
@@ -360,16 +333,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    <!-- <script>
-        // Seleziona la sezione con la classe "mt-5"
-        const section = document.querySelector(".mt-5");
-
-        // Nascondi il contenuto che supera i 60px di overflow laterale
-        section.style.overflowX = "hidden";
-
-        // Rimuovi la proprietà scrollbarWidth impostata precedentemente
-        section.style.scrollbarWidth = "";
-    </script> -->
+    <script src="script.js"></script>
 </body>
 
 </html>
