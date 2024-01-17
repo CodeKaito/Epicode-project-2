@@ -8,6 +8,10 @@ a {
     text-decoration: none;
 }
 
+main {
+    overflow-x: hidden;
+}
+
 .cursor-pointer {
     cursor: pointer;
 }
