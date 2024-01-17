@@ -74,8 +74,8 @@ div.carousel-inner {
 }
 
 i.icon {
-    font-size: 30px;
-    margin-right: 20px;
+    font-size: 15px;
+    margin-right: 5px;
 }
 
 a.servicecode-container {
@@ -93,6 +93,10 @@ a.servicecode-container {
 
 .show {
     opacity: 1;
+}
+
+footer {
+    font-size: 10px;
 }
 
 @media (max-width: 575px) {
@@ -147,6 +151,10 @@ a.servicecode-container {
 }
 
 @media (min-width: 992px){
+
+    .container {
+        max-width: 552px;
+    }
     
     .carousel-inner .carousel-item-end.active,
     .carousel-inner .carousel-item-next {
@@ -164,3 +172,9 @@ a.servicecode-container {
   transform: translateX(0);
 }
 
+@media (min-width: 1400px) {
+    .container {
+        max-width: 552px;
+    }
+    
+}
