@@ -9,14 +9,6 @@ const observer = new IntersectionObserver((entries) => {
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
-document.addEventListener("DOMContentLoaded", function() {
-    document.querySelectorAll('.lazy').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-        });
-    });
-});
-
 let carousels = ['#trending-carousel', '#watchagain-carousel', '#newreleases-carousel'];
 
 carousels.forEach((carousel) => {
